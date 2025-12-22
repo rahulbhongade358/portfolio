@@ -1,7 +1,23 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import { projects } from "../../Data/Projects";
+import { motion } from "framer-motion";
+
 const Projects = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } },
+  };
+
   return (
     <>
       <Navbar />
@@ -14,11 +30,18 @@ const Projects = () => {
             My <span className="text-blue-400">Projects</span>
           </h2>
 
-          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {projects.map((project, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-gray-800 p-6 rounded-xl relative border border-gray-700 hover:border-blue-400 hover:scale-105 transition"
+                variants={cardVariants}
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="pb-16">
                   <h3 className="text-2xl font-semibold">{project.title}</h3>
@@ -27,8 +50,6 @@ const Projects = () => {
 
                   <p className="text-blue-400 mt-3">{project.tech}</p>
                 </div>
-
-                {/* Button at bottom center */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
                   <a
                     href={project.link}
@@ -40,9 +61,9 @@ const Projects = () => {
                     </button>
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

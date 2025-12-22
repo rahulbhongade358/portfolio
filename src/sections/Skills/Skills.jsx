@@ -1,7 +1,23 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import { skills } from "../../Data/Skills";
+import { motion } from "framer-motion";
+
 const Skills = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1, // stagger each skill
+      },
+    },
+  };
+
+  const skillVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } },
+  };
+
   return (
     <>
       <Navbar />
@@ -18,16 +34,23 @@ const Skills = () => {
             Technologies and tools I am comfortable working with
           </p>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <motion.div
+            className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {skills.map((skill, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-gray-800 border border-gray-700 hover:border-blue-400 hover:scale-105 transition py-6 rounded-xl text-center text-lg font-semibold"
+                variants={skillVariants}
+                whileHover={{ scale: 1.05 }}
               >
                 {skill}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
