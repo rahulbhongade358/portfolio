@@ -39,8 +39,14 @@ const About = () => {
             <br />
             <br />I believe in learning by doing. I have built real working
             projects and successfully completed my internship at{" "}
-            <span className="text-blue-400 font-semibold">
-              Therm X Industrial Equipments Pvt. Ltd.
+            <span className="text-blue-400 font-semibold underline">
+              <a
+                href="https://therm-x.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Therm X Industrial Equipments Pvt. Ltd.
+              </a>
             </span>{" "}
             where I developed a Stock Management Website for the company. Most
             of my learning has come through YouTube, documentation, real-world

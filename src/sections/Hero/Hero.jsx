@@ -20,9 +20,17 @@ const Hero = () => {
 
       <div className="min-h-screen text-white flex flex-col md:flex-row items-center justify-center gap-12 bg-gray-950 pt-20 px-8">
         <motion.div
-          className="w-100 h-122.5 bg-linear-to-br from-blue-300 to-purple-500 
-  flex items-center justify-center rounded-[44%_79%_21%_60%] 
-  shadow-[0_0_80px_rgba(255,200,0,0.3)] overflow-hidden"
+          className="
+       w-65 h-65
+      sm:w-75 sm:h-75
+      md:w-90 md:h-90
+      lg:w-100 lg:h-122.5
+      bg-linear-to-br from-blue-300 to-purple-500
+      flex items-center justify-center
+      rounded-[44%_79%_21%_60%]
+      shadow-[0_0_80px_rgba(255,200,0,0.3)]
+      overflow-hidden
+    "
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{
             opacity: 1,
@@ -32,12 +40,13 @@ const Hero = () => {
           }}
           transition={{
             duration: 6,
-            repeat: 1,
+            repeat: 2,
             ease: "easeInOut",
           }}
         >
-          <img src={heroimage} alt="" className="w-full h-full object-cover" />
+          <img src={heroimage} alt="" className="w-full h-full object-fill" />
         </motion.div>
+
         <div className="text-center md:text-left">
           <motion.h1
             variants={blurAnim}

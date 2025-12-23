@@ -17,7 +17,12 @@ const Navbar = () => {
   return (
     <nav className="w-full fixed top-0 left-0 bg-gray-950 text-white z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold">Rahul</div>
+        <div className="text-3xl font-extrabold">
+          <span className="text-blue-400">&lt;</span>
+          Rahul
+          <span className="text-purple-400">/&gt;</span>
+        </div>
+
         <ul className="hidden md:flex gap-8 text-lg">
           {links.map((link) => (
             <li key={link.name}>
