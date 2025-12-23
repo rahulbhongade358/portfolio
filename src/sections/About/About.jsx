@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Resume from "../../components/Resume";
 
 const timelineVariant = {
   hidden: { opacity: 0, y: 80 },
@@ -172,6 +173,15 @@ const About = () => {
             >
               View My Work
             </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <Resume />
           </motion.div>
         </div>
       </section>

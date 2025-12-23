@@ -18,8 +18,6 @@ const Navbar = () => {
     <nav className="w-full fixed top-0 left-0 bg-gray-950 text-white z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         <div className="text-2xl font-bold">Rahul</div>
-
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg">
           {links.map((link) => (
             <li key={link.name}>
@@ -32,8 +30,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        {/* Hamburger Icon */}
         <div className="md:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <HiX size={28} className="cursor-pointer" />
@@ -42,8 +38,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-
-      {/* Mobile Menu with Framer Motion */}
       <AnimatePresence>
         {isOpen && (
           <motion.ul
@@ -64,7 +58,7 @@ const Navbar = () => {
                 <a
                   href={link.href}
                   className="hover:text-blue-400 text-xl transition duration-300"
-                  onClick={toggleMenu} // close menu on click
+                  onClick={toggleMenu}
                 >
                   {link.name}
                 </a>

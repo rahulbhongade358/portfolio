@@ -137,6 +137,7 @@ const Hero = () => {
             >
               View Projects
             </motion.a>
+
             <motion.a
               href="#contact"
               variants={blurAnim}
