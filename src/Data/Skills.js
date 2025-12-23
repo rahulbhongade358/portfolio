@@ -4,7 +4,10 @@ export const skills = [
   "JavaScript",
   "React",
   "Tailwind CSS",
-  "Context API",
+  "Postman",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
   "Git & GitHub",
-  "Responsive Design",
+  "ChatGPT",
 ];

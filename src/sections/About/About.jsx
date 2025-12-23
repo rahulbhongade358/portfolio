@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
 
 const timelineVariant = {
@@ -10,11 +9,9 @@ const timelineVariant = {
 const About = () => {
   return (
     <>
-      <Navbar />
-
       <section
         id="about"
-        className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-8"
+        className="min-h-screen bg-gray-950 text-white flex items-center justify-center px-8 py-16"
       >
         <div className="max-w-5xl mx-auto">
           <motion.h2
@@ -33,26 +30,59 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-8 text-gray-300 leading-relaxed text-lg text-center"
           >
-            I am a final-year Mechanical Engineering student with a strong
-            passion for technology and Frontend Development. I shifted my focus
-            toward software because I enjoy building interactive, user-friendly
-            web applications. I completed my internship at{" "}
+            I am a final-year Mechanical Engineering student who has developed a
+            strong interest in Web Development and the IT field. Even though I
+            don’t come from a traditional Computer Science background, I
+            genuinely enjoy building interactive, user-friendly web applications
+            and continuously improving my skills.
+            <br />
+            <br />I believe in learning by doing. I have built real working
+            projects and successfully completed my internship at{" "}
             <span className="text-blue-400 font-semibold">
               Therm X Industrial Equipments Pvt. Ltd.
             </span>{" "}
-            where I developed and delivered a working Stock Management Website
-            for the company. Most of my learning came through YouTube,
-            documentation, and tools like ChatGPT to speed up understanding —
-            which I consider my strength because it shows I am curious,
-            self-learning and resourceful.
+            where I developed a Stock Management Website for the company. Most
+            of my learning has come through YouTube, documentation, real-world
+            practice and guidance from communities and mentors — which shows I
+            am curious, self-driven and always ready to learn.
             <br />
             <br />
-            My goal now is to start my career in the IT field, gain real-world
-            experience, and keep improving as a Frontend Developer.
+            I am still improving in areas like DSA and theoretical computer
+            science concepts, but that is exactly why I want to enter the IT
+            industry — to gain real practical knowledge, surround myself with
+            knowledgeable people, continue learning, and keep getting better
+            every single day.
+            <br />
+            <br />
+            As a fresher, I may not know everything, but I can confidently
+            promise one thing — whichever company I join, I will give my best,
+            never disappoint the team, and grow into a valuable developer
+            through dedication, consistency and hard work.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+            className="mt-10 bg-gray-900 border border-blue-500/40 rounded-2xl p-6 shadow-lg text-center"
+          >
+            <h3 className="text-2xl font-semibold text-blue-400">
+              💡 Why IT Field?
+            </h3>
+            <p className="text-gray-300 mt-3 leading-relaxed">
+              Because I want to grow in an environment where innovation,
+              problem-solving, and continuous learning never stop. I want to
+              build real-world projects, collaborate with talented developers,
+              be part of a strong tech community, and keep upgrading myself
+              every single day — both professionally and personally.
+            </p>
+
+            <p className="text-blue-400 font-semibold mt-4 text-lg">
+              Learning &gt; Knowing Everything
+            </p>
+          </motion.div>
           <div className="mt-14">
             <div className="relative border-l border-gray-700 ml-4">
-              {/* Education */}
               <motion.div
                 variants={timelineVariant}
                 initial="hidden"
@@ -66,10 +96,12 @@ const About = () => {
                   🎓 Education
                 </h3>
                 <p className="text-gray-300">
-                  Final Year Mechanical Engineering Student with strong interest
-                  in Web Development.
+                  Final Year Mechanical Engineering Student who discovered a
+                  deep passion for Web Development and decided to chase it with
+                  full dedication.
                 </p>
               </motion.div>
+
               <motion.div
                 variants={timelineVariant}
                 initial="hidden"
@@ -83,8 +115,9 @@ const About = () => {
                   🏢 Internship
                 </h3>
                 <p className="text-gray-300">
-                  Completed internship at Therm X and delivered a working web
-                  application.
+                  Successfully completed internship at Therm X Industrial
+                  Equipments Pvt. Ltd. where I worked on a real company problem
+                  and contributed with a working web application.
                 </p>
               </motion.div>
               <motion.div
@@ -100,8 +133,9 @@ const About = () => {
                   💻 Internship Project
                 </h3>
                 <p className="text-gray-300">
-                  Built a Stock Management Website using modern frontend
-                  technologies with smooth UI and performance focus.
+                  Developed a Stock Management Website with clean UI,
+                  performance focus, and practical usability to support company
+                  operations.
                 </p>
               </motion.div>
               <motion.div
@@ -117,14 +151,16 @@ const About = () => {
                   🚀 Goals
                 </h3>
                 <p className="text-gray-300">
-                  Start IT career, gain real-world development experience, and
-                  keep growing as a passionate frontend developer.
+                  Start my IT journey, gain real-world exposure, work on
+                  impactful projects, strengthen my technical depth, actively
+                  learn from experienced developers, and grow into a confident,
+                  skilled and responsible Frontend Developer.
                 </p>
               </motion.div>
             </div>
           </div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
