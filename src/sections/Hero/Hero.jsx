@@ -20,7 +20,7 @@ const Hero = () => {
 
       <div className="min-h-screen text-white flex flex-col md:flex-row items-center justify-center gap-12 bg-gray-950 pt-20 px-8">
         <motion.div
-          className="w-[400px] h-[490px] bg-gradient-to-br from-blue-300 to-purple-500 
+          className="w-100 h-122.5 bg-linear-to-br from-blue-300 to-purple-500 
   flex items-center justify-center rounded-[44%_79%_21%_60%] 
   shadow-[0_0_80px_rgba(255,200,0,0.3)] overflow-hidden"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -102,7 +102,7 @@ const Hero = () => {
                     "perspective(800px) rotateX(0deg) rotateY(0deg) scale(1)";
                 }}
               >
-                <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-tr from-white/20 to-transparent mix-blend-overlay"></span>
+                <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition bg-linear-to-tr from-white/20 to-transparent mix-blend-overlay"></span>
                 {tag}
               </motion.div>
             ))}
