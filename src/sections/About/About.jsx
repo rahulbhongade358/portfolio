@@ -9,7 +9,17 @@ import {
   FaCertificate,
   FaTools,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// Images
+import certificate1 from "../../assets/Certificatesimg/certificate1.jpg";
+import certificate2 from "../../assets/Certificatesimg/certificate2.jpg";
+import certificate3 from "../../assets/Certificatesimg/certificate3.jpg";
 const timelineVariant = {
   hidden: {
     opacity: 0,
@@ -20,6 +30,20 @@ const timelineVariant = {
     y: 0,
   },
 };
+const certificates = [
+  {
+    title: "COST OF INDUSTRIAL SOLUTION CERTIFICATE",
+    image: certificate1,
+  },
+  {
+    title: "INTERNSHIP COMPLETION CERTIFICATE",
+    image: certificate2,
+  },
+  {
+    title: "SAVINGS TO INDUSTRY CERTIFICATE",
+    image: certificate3,
+  },
+];
 
 const About = () => {
   return (
@@ -194,40 +218,54 @@ const About = () => {
 
         {/* Certifications */}
 
+        {/* Certifications */}
+
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mt-16"
+          transition={{ duration: 0.7 }}
+          className="mt-20"
         >
-          <h2 className="text-4xl font-bold text-center">
-            <span className="text-blue-400">Certifications</span>
+          <h2 className="text-5xl font-bold text-center">
+            My <span className="text-blue-400">Certificates</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-10">
-            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition">
-              <FaCertificate className="text-5xl text-blue-400 mb-5" />
+          <p className="text-center text-gray-400 mt-4 max-w-3xl mx-auto">
+            Professional certifications, internship achievements and technical
+            training that reflect my continuous learning journey.
+          </p>
 
-              <h3 className="text-2xl font-semibold">AutoCAD</h3>
+          <div className="mt-12">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              spaceBetween={30}
+              slidesPerView={1}
+            >
+              {certificates.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-137.5 object-contain bg-black"
+                    />
 
-              <p className="text-gray-400 mt-2">Indo German Tool Room (IGTR)</p>
-
-              <span className="inline-block mt-5 bg-blue-600 px-4 py-2 rounded-full">
-                Pursuing
-              </span>
-            </div>
-
-            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 hover:border-blue-500 transition">
-              <FaCertificate className="text-5xl text-blue-400 mb-5" />
-
-              <h3 className="text-2xl font-semibold">SolidWorks</h3>
-
-              <p className="text-gray-400 mt-2">Indo German Tool Room (IGTR)</p>
-
-              <span className="inline-block mt-5 bg-blue-600 px-4 py-2 rounded-full">
-                Pursuing
-              </span>
-            </div>
+                    <div className="p-6 text-center">
+                      <h3 className="text-2xl font-semibold text-blue-400">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </motion.div>
 
