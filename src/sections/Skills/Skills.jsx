@@ -16,6 +16,9 @@ const Skills = () => {
     "Production & Quality": <FaIndustry size={32} className="text-green-400" />,
     "Computer Skills": <FaLaptopCode size={32} className="text-purple-400" />,
     "Professional Skills": <FaUsers size={32} className="text-pink-400" />,
+    "Additional Technical Skills": (
+      <FaUsers size={32} className="text-pink-400" />
+    ),
   };
 
   return (

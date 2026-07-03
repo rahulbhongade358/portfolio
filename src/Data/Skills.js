@@ -51,4 +51,8 @@ export const skills = [
       "Continuous Learning",
     ],
   },
+  {
+    category: "Additional Technical Skills",
+    items: ["React", "Node.js", "MongoDB", "Git", "Basic Web Development"],
+  },
 ];
