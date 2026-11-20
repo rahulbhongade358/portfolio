@@ -1,18 +1,3 @@
 import React from "react";
-import { motion } from "framer-motion";
-
-const Footer = () => {
-  return (
-    <motion.footer
-      className="bg-gray-950 text-gray-400 text-center py-6 border-t border-gray-800"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-    >
-      <p>© {new Date().getFullYear()} Rahul. All Rights Reserved.</p>
-    </motion.footer>
-  );
-};
-
+const Footer = () => <footer className="site-footer"><span>© {new Date().getFullYear()} Rahul Bhongade</span><span>MECHANICAL ENGINEERING PORTFOLIO</span><a href="#home">BACK TO TOP ↑</a></footer>;
 export default Footer;
